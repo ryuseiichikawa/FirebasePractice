@@ -59,20 +59,41 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+//    func signUp() {
+//        guard let email = emailTextField.text else {return}
+//        guard let password = passwordTextField.text else {return}
+//
+//        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {(user, error) in
+//            if error == nil {
+//                self.transitionToLogin()
+//
+//            })
+//        }else{
+//            print("\(error?.localizedDescription)")
+//        }
+//
+//    }
+    
     func signUp() {
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
+        //emailTextFieldとpasswordTextFieldに文字がなければ、その後の処理をしない
+        guard let email = emailTextField.text else  { return }
+        guard let password = passwordTextField.text else { return }
+        //FIRAuth.auth()?.createUserWithEmailでサインアップ
+        //第一引数にEmail、第二引数にパスワード
         
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {(user, error) in
-            if error == nil {
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+            //エラーなしなら、認証完了
+            if error == nil{
+                // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
                 self.transitionToLogin()
-                
-            };)
-        }, else {
+            }
+        } else {
+            
             print("\(error?.localizedDescription)")
         }
-    
     }
+    
+}
     
 //    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
 //    //エラーなしなら、認証完了
@@ -96,4 +117,4 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
-}
+
