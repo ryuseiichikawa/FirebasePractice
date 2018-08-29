@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
 
@@ -27,6 +30,19 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //ログインしていれば、遷移
+        //FIRAuthがユーザー認証のためのフレーム
+        //checkUserVerifyでチェックして、ログイン済みなら画面遷移
+        if self.checkUserVerify() {
+            self.transitionToView()
+        }
+    }
+    
+    // ログイン済みかどうかと、メールのバリデーションが完了しているか確認
+    func checkUserVerify()  -> Bool {
+        guard let user = Auth.auth().currentUser else { return false }
+        return user.isEmailVerified
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,19 +97,30 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         //FIRAuth.auth()?.createUserWithEmailでサインアップ
         //第一引数にEmail、第二引数にパスワード
         
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             //エラーなしなら、認証完了
-            if error == nil{
-                // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
-                self.transitionToLogin()
-            }
-        } else {
+            if error == nil  {
+                Auth.auth().currentUser?.sendEmailVerification { (error) in
+                    if error == nil {
+                        // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
+                        self.transitionToLogin()
+                    }else {
+                        print("\(error?.localizedDescription)")
+                    }
+                }
+                
+//                // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
+//                self.transitionToLogin()
+                
+            } else {
             
             print("\(error?.localizedDescription)")
         }
-    }
-    
-}
+            
+        }
+        
+            }
     
 //    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
 //    //エラーなしなら、認証完了
@@ -118,3 +145,4 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     */
 
 
+}

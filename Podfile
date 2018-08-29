@@ -6,15 +6,11 @@ target 'FirebasePractice' do
   use_frameworks!
    pod 'Firebase/Core'
    
-   pod 'FirebaseUI'
    
    pod 'Firebase/Auth'
    pod 'Firebase/Database'
    
-   pod 'FirebaseUI/Google'
-   pod 'FirebaseUI/Facebook'
-   pod 'FirebaseUI/Twitter'
-   pod 'FirebaseUI/Phone'
+   
 
 
 
