@@ -57,7 +57,7 @@
                         <outlet property="emailTextField" destination="6tE-Q0-din" id="reG-gU-BQi"/>
                         <outlet property="passwordTextField" destination="U2a-qy-CGI" id="Ofy-rk-EkO"/>
                         <segue destination="ToV-wX-Tqu" kind="show" identifier="toLogin" id="Mpd-VH-2hf"/>
-                        <segue destination="qBr-u0-cIw" kind="showDetail" identifier="toView" id="48g-mA-Sd6"/>
+                        <segue destination="qBr-u0-cIw" kind="showDetail" identifier="toView" animates="NO" id="48g-mA-Sd6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZY-s2-wv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,26 +116,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-Gf-4Ss">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-Gf-4Ss">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-k6-4zI">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="on4-dj-xgc">
+                                        <connections>
+                                            <action selector="didSelectAdd:" destination="qBr-u0-cIw" id="EBc-ud-biy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9SV-Gf-4Ss" firstAttribute="top" secondItem="qxn-Lo-IzJ" secondAttribute="top" id="GpQ-Ib-Tdz"/>
+                            <constraint firstItem="9SV-Gf-4Ss" firstAttribute="trailing" secondItem="qxn-Lo-IzJ" secondAttribute="trailing" id="Kn7-4g-oFg"/>
+                            <constraint firstItem="9SV-Gf-4Ss" firstAttribute="leading" secondItem="qxn-Lo-IzJ" secondAttribute="leading" id="LQu-b9-0Y8"/>
+                            <constraint firstItem="qxn-Lo-IzJ" firstAttribute="bottom" secondItem="9SV-Gf-4Ss" secondAttribute="bottom" id="e2R-4b-WTz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qxn-Lo-IzJ"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="add" id="Kuh-X0-hvk">
-                            <connections>
-                                <action selector="didSelectAdd:" destination="qBr-u0-cIw" id="vhF-S1-rWw"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="table" destination="9SV-Gf-4Ss" id="b3h-PB-NDd"/>
-                        <segue destination="4Vo-E0-UjJ" kind="showDetail" id="hUV-Zj-DgO"/>
+                        <segue destination="4Vo-E0-UjJ" kind="showDetail" identifier="toView" id="hUV-Zj-DgO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MI-yt-vyb" userLabel="First Responder" sceneMemberID="firstResponder"/>

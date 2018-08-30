@@ -21,6 +21,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         // Do any additional setup after loading the view.
         
         emailTextField.delegate = self
@@ -29,6 +31,10 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //ログインしていれば、遷移
@@ -37,6 +43,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         if self.checkUserVerify() {
             self.transitionToView()
         }
+        
     }
     
     // ログイン済みかどうかと、メールのバリデーションが完了しているか確認

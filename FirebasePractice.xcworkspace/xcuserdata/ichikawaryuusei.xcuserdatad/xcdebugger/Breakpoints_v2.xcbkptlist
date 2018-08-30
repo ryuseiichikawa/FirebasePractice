@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebasePractice/ViewController.swift"
+            timestampString = "557321162.694374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "create()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FirebasePractice.ViewController.create() -&gt; ()"
+                  moduleName = "FirebasePractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ichikawaryuusei/Desktop/iOS-Projects/FirebasePractice/FirebasePractice/ViewController.swift"
+                  timestampString = "557321162.703005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "565">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FirebasePractice.ViewController.create() -&gt; ()"
+                  moduleName = "FirebasePractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ichikawaryuusei/Desktop/iOS-Projects/FirebasePractice/FirebasePractice/ViewController.swift"
+                  timestampString = "557321162.704962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1799">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
