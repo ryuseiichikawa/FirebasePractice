@@ -83,27 +83,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     
-    func logout() {
-        
-//       let firebaseAuth = Auth.auth()
-        //    do {
-        //    try firebaseAuth.signOut()
-        //    } catch let signOutError as NSError {
-        //    print ("Error signing out: %@", signOutError)
-        //    }
-        
-        do {
-            //do-try-catchの中で、Auth.auth().signOut()を呼ぶだけで、ログアウトが完了
-            try Auth.auth().signOut()
-            
-            //先頭のNavigationControllerに遷移
-            let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
-            self.present(storyboard, animated: true, completion: nil)
-        }catch let error as NSError {
-            print("\(error.localizedDescription)")
-        }
-        
-    }
+    
+    
+    
     
     //更新のためのメソッド
     func update() {

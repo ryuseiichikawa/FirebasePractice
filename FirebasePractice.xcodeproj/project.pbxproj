@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		160F2CF22136AF09007C7803 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F2CF02136AF09007C7803 /* ListTableViewCell.swift */; };
 		160F2CF32136AF09007C7803 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160F2CF12136AF09007C7803 /* ListTableViewCell.xib */; };
+		160F2CF52138FFBF007C7803 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F2CF42138FFBF007C7803 /* ProfileViewController.swift */; };
 		1664674A21227324000DFC80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1664674921227324000DFC80 /* AppDelegate.swift */; };
 		1664674C21227324000DFC80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1664674B21227324000DFC80 /* ViewController.swift */; };
 		1664674F21227324000DFC80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1664674D21227324000DFC80 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		160F2CF02136AF09007C7803 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		160F2CF12136AF09007C7803 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		160F2CF42138FFBF007C7803 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1664674621227324000DFC80 /* FirebasePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebasePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1664674921227324000DFC80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1664674B21227324000DFC80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				16A97D95212FEA370038A8A6 /* ListViewController.swift */,
 				160F2CF02136AF09007C7803 /* ListTableViewCell.swift */,
 				160F2CF12136AF09007C7803 /* ListTableViewCell.xib */,
+				160F2CF42138FFBF007C7803 /* ProfileViewController.swift */,
 			);
 			path = FirebasePractice;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				16A97D92212FE8600038A8A6 /* SignupViewController.swift in Sources */,
 				1664674C21227324000DFC80 /* ViewController.swift in Sources */,
 				16A97D96212FEA370038A8A6 /* ListViewController.swift in Sources */,
+				160F2CF52138FFBF007C7803 /* ProfileViewController.swift in Sources */,
 				1664674A21227324000DFC80 /* AppDelegate.swift in Sources */,
 				160F2CF22136AF09007C7803 /* ListTableViewCell.swift in Sources */,
 			);
